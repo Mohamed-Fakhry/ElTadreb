@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">El Tadreb</string>
+    <string name="some_error">حدث خطأ</string>
+    <string name="api_default_error">حدث خطأ</string>
+    <string name="connection_error">فقد الاتصال بشبكة</string>
+    <string name="api_retry_error">حاول مرة اخرى</string>
+</resources>
