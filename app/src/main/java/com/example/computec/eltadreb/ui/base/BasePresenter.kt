@@ -4,7 +4,7 @@ import android.util.Log
 import com.androidnetworking.common.ANConstants
 import com.androidnetworking.error.ANError
 import com.example.computec.eltadreb.R
-import com.example.computec.eltadreb.data.network.model.ApiError
+import com.example.computec.eltadreb.data.service.model.ApiError
 import com.example.computec.eltadreb.utils.AppConstants
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonSyntaxException

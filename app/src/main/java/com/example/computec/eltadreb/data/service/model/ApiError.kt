@@ -1,4 +1,4 @@
-package com.example.computec.eltadreb.data.network.model
+package com.example.computec.eltadreb.data.service.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
