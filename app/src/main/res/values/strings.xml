@@ -11,4 +11,8 @@
     <string name="empty_username">برجاء ادخال اسم المستخدم</string>
     <string name="empty_password">برجاء ادخال كلمة المرور</string>
     <string name="empty_username_and_password">برجاء ادخال اسم المستخدم و كلمة المرور</string>
+    <string name="empty_email">برجاء ادخال البريد الالكترونى</string>
+    <string name="sent_rest_password">ارسال</string>
+    <string name="email">البريد الالكترونى</string>
+    <string name="dont_remeber_password">لا اتذكر كلمة المرور</string>
 </resources>

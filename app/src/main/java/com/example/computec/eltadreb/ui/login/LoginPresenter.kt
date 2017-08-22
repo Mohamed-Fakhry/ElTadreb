@@ -10,6 +10,7 @@ class LoginPresenter<V: LoginContract.View>: BasePresenter<V>(), LoginContract.P
 
         if((username == null || username.isEmpty()) && (password == null || password.isEmpty())) {
             mvpView?.onError(R.string.empty_username_and_password)
+            return
         } else if (username == null || username.isEmpty()) {
             mvpView?.onError(R.string.empty_username)
             return

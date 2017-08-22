@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import com.example.computec.eltadreb.R
 import com.example.computec.eltadreb.ui.base.BaseActivity
+import com.example.computec.eltadreb.ui.rest.RestPasswordActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity(), LoginContract.View {
@@ -22,11 +23,16 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     }
 
     override fun setUp() {
+        // setup presenter
         loginPresenter = LoginPresenter()
         loginPresenter.onAttach(this@LoginActivity)
+
+        //setup view actions
         loginB.setOnClickListener {
             loginPresenter.onLoginBtnClick(usernameET?.text.toString(), passwordET?.text.toString())
         }
+
+        rememberTV.setOnClickListener { RestPasswordActivity.getStartIntent(this@LoginActivity) }
     }
 
     override fun openMainActivity() {
