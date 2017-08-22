@@ -10,6 +10,7 @@ import android.support.annotation.StringRes
 import android.support.design.widget.Snackbar
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
+import android.view.Gravity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
@@ -17,6 +18,7 @@ import android.widget.Toast
 
 
 import com.example.computec.eltadreb.R
+import com.example.computec.eltadreb.ui.login.LoginActivity
 import com.example.computec.eltadreb.utils.CommonUtils
 import com.example.computec.eltadreb.utils.NetworkUtils
 
@@ -63,7 +65,11 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
         val sbView = snackbar.view
         val textView = sbView
                 .findViewById<View>(android.support.design.R.id.snackbar_text) as TextView
-        textView.setTextColor(ContextCompat.getColor(this, R.color.white))
+        textView.setTextColor(ContextCompat.getColor(this, R.color.whiteColor))
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
+            textView.textAlignment = View.TEXT_ALIGNMENT_VIEW_END
+        else
+            textView.gravity = Gravity.END
         snackbar.show()
     }
 
@@ -111,7 +117,7 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
     }
 
     override fun openActivityOnTokenExpire() {
-        //        startActivity(LoginActivity.getStartIntent(this));
+        startActivity(LoginActivity.getStartIntent(this))
         finish()
     }
 

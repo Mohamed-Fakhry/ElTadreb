@@ -24,21 +24,21 @@ class App : Application() {
         lateinit var getService: Service
 
         internal fun createApi(authInterceptor: AuthInterceptor?) {
-            val clientBulider: OkHttpClient.Builder
+            val clientBuilder: OkHttpClient.Builder
             val client: OkHttpClient
             val interceptor = HttpLoggingInterceptor()
             interceptor.level = HttpLoggingInterceptor.Level.BODY
 
-            clientBulider = OkHttpClient.Builder()
+            clientBuilder = OkHttpClient.Builder()
                     .addInterceptor(interceptor)
 
-            authInterceptor.let {
-                clientBulider.addInterceptor(
+            authInterceptor?.let {
+                clientBuilder.addInterceptor(
                         authInterceptor
                     )
             }
 
-            client = clientBulider.build()
+            client = clientBuilder.build()
 
             val retrofit = Retrofit.Builder()
                     .baseUrl(Constant.BASE_URL)

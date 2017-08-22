@@ -4,4 +4,11 @@
     <string name="api_default_error">حدث خطأ</string>
     <string name="connection_error">فقد الاتصال بشبكة</string>
     <string name="api_retry_error">حاول مرة اخرى</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="password">كلمة المرور</string>
+    <string name="remember_password">لا اتذكر كلمة المرور</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="empty_username">برجاء ادخال اسم المستخدم</string>
+    <string name="empty_password">برجاء ادخال كلمة المرور</string>
+    <string name="empty_username_and_password">برجاء ادخال اسم المستخدم و كلمة المرور</string>
 </resources>

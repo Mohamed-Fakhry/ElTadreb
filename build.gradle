@@ -42,5 +42,5 @@ ext {
 
     retrofitVersion = '2.3.0'
     okhttpVersion = '3.8.1'
-//    butterKnifeVersion = '8.6.0'
+    butterKnifeVersion = '8.6.0'
 }

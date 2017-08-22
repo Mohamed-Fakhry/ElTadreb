@@ -10,7 +10,7 @@ import com.google.gson.GsonBuilder
 import com.google.gson.JsonSyntaxException
 import javax.net.ssl.HttpsURLConnection
 
-class BasePresenter<V : MvpView> : MvpPresenter<V> {
+open class BasePresenter<V : MvpView> : MvpPresenter<V> {
 
 
     var mvpView: V? = null
