@@ -15,4 +15,16 @@
     <string name="sent_rest_password">ارسال</string>
     <string name="email">البريد الالكترونى</string>
     <string name="dont_remeber_password">لا اتذكر كلمة المرور</string>
+    <string name="title_activity_main">الرئسية</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="nav_main">الرئسية</string>
+    <string name="nav_courses">الدورات</string>
+    <string name="nav_achievements">الانجازات</string>
+    <string name="nav_profile">حسابى الشخصى</string>
+    <string name="nav_exit">تسجيل الخروج</string>
+    <string name="nav_sec_profile">الحسابى</string>
 </resources>

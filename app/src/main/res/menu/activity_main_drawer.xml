@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:checked="true"
+            android:icon="@drawable/ic_menu_home_24dp"
+            android:title="@string/nav_main" />
+        <item
+            android:id="@+id/nav_courses"
+            android:icon="@drawable/ic_menu_courses_24dp"
+            android:title="@string/nav_courses" />
+        <item
+            android:id="@+id/nav_achievements"
+            android:icon="@drawable/ic_menu_achievements_24dp"
+            android:title="@string/nav_achievements" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_profile_24dp"
+            android:title="@string/nav_profile" />
+    </group>
+
+    <item
+        android:id="@+id/nav_exit"
+        android:icon="@drawable/ic_menu_exit_app_24dp"
+        android:title="@string/nav_exit" />
+</menu>
