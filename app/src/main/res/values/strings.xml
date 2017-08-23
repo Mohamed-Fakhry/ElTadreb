@@ -27,5 +27,6 @@
     <string name="nav_profile">حسابى الشخصى</string>
     <string name="nav_exit">تسجيل الخروج</string>
     <string name="nav_sec_profile">الحسابى</string>
+    <string name="font_name">fonts/NeoSansArabic.ttf</string>
 
 </resources>
