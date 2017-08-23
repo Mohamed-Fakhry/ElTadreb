@@ -11,7 +11,7 @@ import com.example.computec.eltadreb.R
 import com.example.computec.eltadreb.ui.achievements.AchievementsFragment
 import com.example.computec.eltadreb.ui.base.BaseActivity
 import com.example.computec.eltadreb.ui.courses.CoursesFragment
-import com.example.computec.eltadreb.ui.profile.ProfileFragment
+import com.example.computec.eltadreb.ui.profile.ProfileActivity
 import com.example.computec.eltadreb.utils.ActivityUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -62,7 +62,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 openAchievementsFragment()
             }
             R.id.nav_profile -> {
-                openProfileFragment()
+                openProfileActivity()
             }
             R.id.nav_exit -> {
                 finish()
@@ -88,8 +88,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 AchievementsFragment.newInstance())
     }
 
-    private fun openProfileFragment() {
-        ActivityUtils.addFragmentToActivity(supportFragmentManager,
-                ProfileFragment.newInstance())
+    private fun openProfileActivity() {
+        startActivity(ProfileActivity.getStartIntent(this))
     }
 }
