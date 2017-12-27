@@ -4,10 +4,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.computec.eltadreb.ui.main.MainFragment">
     
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/achievementsRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="24sp"/>
-
+        tools:listitem="@layout/item_achievement"/>
 </FrameLayout>

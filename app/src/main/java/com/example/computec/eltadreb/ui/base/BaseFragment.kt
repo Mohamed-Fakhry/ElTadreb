@@ -2,6 +2,7 @@ package com.example.computec.eltadreb.ui.base
 
 import android.app.Dialog
 import android.content.Context
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.support.annotation.StringRes
 import android.support.v4.app.Fragment

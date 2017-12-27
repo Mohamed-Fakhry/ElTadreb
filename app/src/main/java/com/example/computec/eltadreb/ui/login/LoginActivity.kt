@@ -6,12 +6,10 @@ import android.os.Bundle
 import com.example.computec.eltadreb.R
 import com.example.computec.eltadreb.ui.base.BaseActivity
 import com.example.computec.eltadreb.ui.main.MainActivity
-import com.example.computec.eltadreb.ui.rest.RestPasswordActivity
+import com.example.computec.eltadreb.utils.ActivityUtils
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : BaseActivity(), LoginContract.View {
-
-    private lateinit var loginPresenter: LoginContract.Presenter<LoginActivity>
+class LoginActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,27 +22,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     }
 
     override fun setUp() {
-        // setup presenter
-        loginPresenter = LoginPresenter()
-        loginPresenter.onAttach(this@LoginActivity)
-
-        //setup view actions
-        loginB.setOnClickListener {
-            loginPresenter.onLoginBtnClick(usernameET?.text.toString(), passwordET?.text.toString())
-        }
-
-        rememberTV.setOnClickListener {
-            startActivity(RestPasswordActivity.getStartIntent(this@LoginActivity))
-        }
-    }
-
-    override fun openMainActivity() {
-        startActivity(MainActivity.getStartIntent(this@LoginActivity))
-        finish()
-    }
-
-    override fun onDestroy() {
-        loginPresenter.onDetach()
-        super.onDestroy()
+        ActivityUtils.addFragmentToActivity(supportFragmentManager,
+                LoginFragment.newInstance())
     }
 }

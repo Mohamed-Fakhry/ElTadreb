@@ -3,9 +3,9 @@ package com.example.computec.eltadreb
 import android.app.Application
 
 import com.androidnetworking.interceptors.HttpLoggingInterceptor
-import com.example.computec.eltadreb.data.service.AuthInterceptor
-import com.example.computec.eltadreb.data.service.Constant
-import com.example.computec.eltadreb.data.service.Service
+import com.example.computec.eltadreb.service.AuthInterceptor
+import com.example.computec.eltadreb.service.Constant
+import com.example.computec.eltadreb.service.Service
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -18,7 +18,6 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         createApi(null)
-
         initCalligraphyConfig()
     }
 
@@ -45,7 +44,7 @@ class App : Application() {
             authInterceptor?.let {
                 clientBuilder.addInterceptor(
                         authInterceptor
-                    )
+                )
             }
 
             client = clientBuilder.build()

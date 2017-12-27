@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
+import android.util.Log
 import android.view.MenuItem
 import com.example.computec.eltadreb.R
+import com.example.computec.eltadreb.service.LoginPref
 import com.example.computec.eltadreb.ui.achievements.AchievementsFragment
 import com.example.computec.eltadreb.ui.base.BaseActivity
 import com.example.computec.eltadreb.ui.courses.CoursesFragment
@@ -42,10 +44,14 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         openMainFragment()
     }
 
-    override fun onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START)
-        } else {
+    override fun onBackPressed() = when {
+        drawerLayout.isDrawerOpen(GravityCompat.START) -> drawerLayout.closeDrawer(GravityCompat.START)
+        fragmentManager.backStackEntryCount > 0 -> {
+            Log.e("count", fragmentManager.backStackEntryCount.toString())
+            fragmentManager.popBackStack()
+        }
+        else -> {
+            Log.e("count", fragmentManager.backStackEntryCount.toString())
             super.onBackPressed()
         }
     }
@@ -65,6 +71,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 openProfileActivity()
             }
             R.id.nav_exit -> {
+                val loginPref = LoginPref(this)
+                loginPref.removeAccessToken(this)
                 finish()
             }
         }

@@ -8,9 +8,10 @@ interface LoginContract {
 
     interface View: MvpView {
         fun openMainActivity()
+        fun setToken(token: String)
     }
 
-    interface Presenter<V: View>: MvpPresenter<V> {
+    interface Presenter<v: View>: MvpPresenter<v> {
         fun onLoginBtnClick(username: String?, password: String?)
     }
 }

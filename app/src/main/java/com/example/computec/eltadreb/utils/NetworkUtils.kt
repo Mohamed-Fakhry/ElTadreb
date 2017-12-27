@@ -11,4 +11,4 @@ object NetworkUtils {
         val activeNetwork = cm.activeNetworkInfo
         return activeNetwork != null && activeNetwork.isConnectedOrConnecting
     }
-}// This utility class is not publicly instantiable
+}

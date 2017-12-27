@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">El Tadreb</string>
+    <string name="app_name">Nbras</string>
     <string name="some_error">حدث خطأ</string>
     <string name="api_default_error">حدث خطأ</string>
     <string name="connection_error">فقد الاتصال بشبكة</string>
@@ -28,5 +28,15 @@
     <string name="nav_exit">تسجيل الخروج</string>
     <string name="nav_sec_profile">الحسابى</string>
     <string name="font_name">fonts/NeoSansArabic.ttf</string>
+    <string name="testTextVideo">الدرس الاول : حساب المثلثات الدوال المثلثية</string>
+    <string name="test">نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي </string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="commentTranstionName">comment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="error_no_internet_connection">لا يوجد اتصال بالشبكة</string>
+    <string name="error_username_password_incorrect">اسم المستخدم او كلمة المرور خاطئة</string>
 </resources>

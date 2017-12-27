@@ -4,14 +4,13 @@ import android.util.Log
 import com.androidnetworking.common.ANConstants
 import com.androidnetworking.error.ANError
 import com.example.computec.eltadreb.R
-import com.example.computec.eltadreb.data.service.model.ApiError
+import com.example.computec.eltadreb.service.model.ApiError
 import com.example.computec.eltadreb.utils.AppConstants
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonSyntaxException
 import javax.net.ssl.HttpsURLConnection
 
 open class BasePresenter<V : MvpView> : MvpPresenter<V> {
-
 
     var mvpView: V? = null
 
@@ -52,7 +51,7 @@ open class BasePresenter<V : MvpView> : MvpPresenter<V> {
         try {
             val apiError = gson.fromJson(error.errorBody, ApiError::class.java)
 
-            if (apiError == null || apiError.message == null) {
+            if (apiError?.message == null) {
                 mvpView!!.onError(R.string.api_default_error)
                 return
             }
